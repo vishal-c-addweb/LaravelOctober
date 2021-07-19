@@ -1,0 +1,24 @@
+url = "/movie/:slug"
+layout = "default"
+title = "Movie"
+
+[builderDetails]
+modelClass = "Creator\Movies\Models\Movie"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "name"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% if record %}
+    <h2>{{ record.name }}</h2>
+    <h4>{{ record.year }}</h4>
+    <h3>Description:</h3>
+
+    <p>{{ record.description|raw }}</p>
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}

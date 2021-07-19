@@ -1,0 +1,18 @@
+title = "BlogCategory"
+layout = "default"
+url = "/blog/category/:slug"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = ":slug"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "account"
+postPage = "blog/post"
+
+[session]
+security = "user"
+redirect = "account"
+==
+{% component "blogPosts" %}

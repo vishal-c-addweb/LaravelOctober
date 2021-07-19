@@ -1,0 +1,14 @@
+url = "/about"
+layout = "default"
+title = "about"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+==
+<h1>helllo</h1>
+ {% component "blogPosts" %}

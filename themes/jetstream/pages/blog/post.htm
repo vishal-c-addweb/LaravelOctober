@@ -1,0 +1,22 @@
+url = "/blog/post/:slug"
+layout = "default"
+title = "BlogPost"
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "account"
+
+[session]
+security = "user"
+redirect = "account"
+
+[forumEmbedTopic]
+embedCode = ":slug"
+channelSlug = "blog-comment"
+memberPage = "account"
+==
+{% component "blogPost" %}
+
+<h2>Comments:</h2>
+
+{% component "forumEmbedTopic" %}

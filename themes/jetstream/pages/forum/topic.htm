@@ -1,0 +1,12 @@
+title = "Forum Topic"
+layout = "default"
+url = "/forum/topic/:slug"
+
+[forumTopic]
+slug = "{{ :slug }}"
+postsPerPage = 20
+memberPage = "account"
+channelPage = "forum/channel"
+includeStyles = 1
+==
+{% component "forumTopic" %}

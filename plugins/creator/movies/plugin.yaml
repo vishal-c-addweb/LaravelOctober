@@ -1,0 +1,11 @@
+plugin:
+    name: 'creator.movies::lang.plugin.name'
+    description: 'creator.movies::lang.plugin.description'
+    author: creator
+    icon: oc-icon-video-camera
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Movies
+        url: creator/movies/movies
+        icon: icon-video-camera
