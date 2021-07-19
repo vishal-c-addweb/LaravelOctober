@@ -11,14 +11,14 @@ sortOrder = "published_at desc"
 categoryPage = "blog/category"
 postPage = "blog/post"
 
+[session]
+security = "user"
+redirect = "account"
+
 [blogCategories]
 slug = "{{ :slug }}"
 displayEmpty = 0
 categoryPage = "blog/category"
-
-[session]
-security = "user"
-redirect = "account"
 ==
 <div clas="container">
     <div class="row">

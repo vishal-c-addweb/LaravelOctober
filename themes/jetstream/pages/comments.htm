@@ -1,0 +1,25 @@
+url = "/comments"
+layout = "default"
+title = "comments"
+
+[commentsPost]
+==
+{% set posts = commentsPost.posts %}
+
+<div class="row">
+    <div class="col-xs-6" id="comments-content">
+        {% if(commentsPost.count) > 0 %}
+            <h3 class="text-right"><span id="comments-count">{{ commentsPost.count }}</span> comments</h3>
+        {% endif %}
+        {% if(user or commentsPost.settings.allow_guest) %}
+
+            {% partial "commentsPost::form" %}
+
+        {% endif %}
+        <div class="comments">
+            <ul>
+                {% partial "commentsPost::list" posts=posts %}
+            </ul>
+        </div>
+    </div>
+</div>

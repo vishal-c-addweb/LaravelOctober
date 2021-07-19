@@ -10,13 +10,10 @@ categoryPage = "account"
 security = "user"
 redirect = "account"
 
-[forumEmbedTopic]
-embedCode = ":slug"
-channelSlug = "blog-comment"
-memberPage = "account"
+[commentsPost]
 ==
 {% component "blogPost" %}
 
 <h2>Comments:</h2>
 
-{% component "forumEmbedTopic" %}
+{% component "commentsPost" %}
