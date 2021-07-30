@@ -36,7 +36,7 @@ class Settings extends Model
      */
     public function getStatusOptions($keyValue = null)
     {
-        return Comments::STATUS;
+        return Comment::STATUS;
     }
-    
+
 }

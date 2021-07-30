@@ -27,6 +27,8 @@ function onStart()
                         <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'blog'|page }}">Blog</a></li>
                         <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'forum'|page }}">Forums</a></li>
                         <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'movies'|page }}">Movies</a></li>
+                        <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'comments'|page }}">Comments</a></li>
+                        <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'weather'|page }}">Weather</a></li>
                         {% if user %}
                             <li class="{% if this.page.id == 'account' %}active{% endif %}"><a href="{{ 'account'|page }}">Profile</a></li>
                             <li><a data-request="onLogout" data-request-data="redirect: '/'">Sign out</a>

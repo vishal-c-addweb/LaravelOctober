@@ -25,6 +25,8 @@ use Backend\Classes\ControllerBehavior;
  */
 class ReorderController extends ControllerBehavior
 {
+    use \October\Rain\Database\Traits\Sortable;
+    
     /**
      * @inheritDoc
      */
@@ -211,6 +213,7 @@ class ReorderController extends ControllerBehavior
      */
     protected function validateModel()
     {
+        
         $model = $this->controller->reorderGetModel();
         $modelTraits = class_uses($model);
 

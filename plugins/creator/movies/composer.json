@@ -1,0 +1,8 @@
+{
+    "name": "creator/movies-plugin",
+    "type": "october-plugin",
+    "description": "movies plugins",
+    "require": {
+        "composer/installers": "~1.5"
+    }
+}

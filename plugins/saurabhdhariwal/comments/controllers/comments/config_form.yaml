@@ -1,5 +1,5 @@
 name: Comments
-modelClass: SaurabhDhariwal\Comments\Models\Comments
+modelClass: SaurabhDhariwal\Comments\Models\Comment
 form: $/saurabhdhariwal/comments/models/comments/fields.yaml
 defaultRedirect: saurabhdhariwal/comments/comments
 create:

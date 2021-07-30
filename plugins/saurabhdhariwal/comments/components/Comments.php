@@ -8,8 +8,7 @@ use Illuminate\Support\Facades\Request;
 use SaurabhDhariwal\Comments\Models\Settings;
 use Validator;
 use Auth;
-use Illuminate\Support\Facades\Crypt;
-use SaurabhDhariwal\Comments\Models\Comments as CommentsModel;
+use SaurabhDhariwal\Comments\Models\Comment as CommentsModel;
 
 /**
  * Class Comments
@@ -130,7 +129,7 @@ class Comments extends ComponentBase
     public function saveComment()
     {
         $model = new CommentsModel();
-        $model->content = Crypt::encryptString(strip_tags(post('content')));
+        $model->content = strip_tags(post('content'));
         $model->url = $this->url;
         $parent_id = post('parent_id');
         if(is_numeric($parent_id)){

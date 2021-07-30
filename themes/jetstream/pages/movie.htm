@@ -16,9 +16,28 @@ notFoundMessage = "Record not found"
 {% if record %}
     <h2>{{ record.name }}</h2>
     <h4>{{ record.year }}</h4>
+
+    <img src="{{record.poster.thumb(200,auto)}}">
+
     <h3>Description:</h3>
 
     <p>{{ record.description|raw }}</p>
+
+    <h3>Poster Gallary </h3>
+
+    <ul class="gallary clearfix">
+    <tr>
+    {% for item in record.movie_gallary %}
+
+        <td>
+
+            <img src="{{ item.thumb(100,100,{'mode':'crop'} ) }}">
+        
+        </td>
+    </tr>
+    {% endfor %}
+
+    </ul>
 {% else %}
     {{ notFoundMessage }}
 {% endif %}
